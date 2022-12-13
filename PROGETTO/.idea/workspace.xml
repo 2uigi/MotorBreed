@@ -26,7 +26,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Luigi/IdeaProjects/PROGETTO/src/main/java/motorbreed/progetto",
+    "last_opened_file_path": "/Users/matteocalzetta/Desktop/workingCopy/trunk/PROGETTO",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "editor.preferences.import"
   }
 }]]></component>
@@ -45,6 +48,7 @@
       <option name="presentableId" value="Default" />
       <updated>1670951306312</updated>
       <workItem from="1670951307679" duration="559000" />
+      <workItem from="1670953133293" duration="51000" />
     </task>
     <servers />
   </component>
