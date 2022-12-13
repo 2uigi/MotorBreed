@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.GUIControllers.InsertpageController">
+    <children>
+        <AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: black;">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="WHITE" height="639.0" layoutX="171.0" layoutY="86.0" stroke="BLACK" strokeType="INSIDE" width="938.0" />
+                <Label layoutX="581.0" layoutY="95.0" text="Sell your car">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="85.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: black;" width="1280.0" />
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="3.0" layoutY="84.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white;" width="1280.0" />
+                <ImageView fitHeight="61.0" fitWidth="73.0" layoutX="245.0" layoutY="13.0">
+                    <image>
+                        <Image url="@../Icons_and_pics/Logoicon.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="633.0" fitWidth="171.0" layoutX="1109.0" layoutY="86.0">
+                    <image>
+                        <Image url="@../Icons_and_pics/black.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="639.0" fitWidth="171.0" layoutY="86.0">
+                    <image>
+                        <Image url="@../Icons_and_pics/black.png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="brandLabel" layoutX="200.0" layoutY="154.0" prefHeight="26.0" prefWidth="49.0" text="Brand">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Label>
+                <Button fx:id="autosell" layoutX="5.0" layoutY="9.0" mnemonicParsing="false" onAction="#setHomepage" style="-fx-background-color: black; -fx-text-fill: white;" text="MotorBreed">
+                    <font>
+                        <Font name="System Bold" size="34.0" />
+                    </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </Button>
+                <Button fx:id="confirmButton" disable="true" layoutX="975.0" layoutY="653.0" mnemonicParsing="false" style="-fx-background-color: #097ccf; -fx-border-color: black;" text="Confirm" textFill="WHITE">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </Button>
+            <TextField fx:id="brandTextField" layoutX="200.0" layoutY="193.0" promptText="Insert your car's brand" style="-fx-border-color: #028eff;" />
+            <Label fx:id="modelLabel" layoutX="565.0" layoutY="152.0" prefHeight="26.0" prefWidth="49.0" text="Model">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="modelTextField" layoutX="565.0" layoutY="193.0" promptText="Insert your car's model" style="-fx-border-color: #028eff;" />
+            <Label fx:id="mileageLabel" layoutX="933.0" layoutY="152.0" prefHeight="26.0" prefWidth="73.0" text="Mileage">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="mileageTextField" layoutX="933.0" layoutY="193.0" promptText="Insert your car's mileage" style="-fx-border-color: #028eff;" />
+            <Label fx:id="productionYearLabel" layoutX="200.0" layoutY="297.0" prefHeight="26.0" prefWidth="128.0" text="Production Year">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="productionYearTextField" layoutX="200.0" layoutY="336.0" prefHeight="27.0" prefWidth="193.0" promptText="Insert your car's production year" style="-fx-border-color: #028eff;" />
+            <Label fx:id="horsepowerLabel" layoutX="565.0" layoutY="297.0" prefHeight="26.0" prefWidth="109.0" text="Horsepower">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="horsepowerTextField" layoutX="565.0" layoutY="336.0" prefHeight="27.0" prefWidth="171.0" promptText="Insert your car's Horsepower" style="-fx-border-color: #028eff;" />
+            <Label fx:id="fuelTypeLabel" layoutX="933.0" layoutY="289.0" prefHeight="26.0" prefWidth="73.0" text="Fuel type">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fuelTypeTextField" layoutX="933.0" layoutY="330.0" promptText="Insert your car's fuel type" style="-fx-border-color: #028eff;" />
+            <Label fx:id="licencePlateLabel" layoutX="200.0" layoutY="440.0" prefHeight="26.0" prefWidth="109.0" text="Licence plate">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="licencePlateTextField" layoutX="200.0" layoutY="479.0" prefWidth="186.0" promptText="Insert your car's licence plate" style="-fx-border-color: #028eff;" />
+            <Label fx:id="immatricolationDateLabel" layoutX="565.0" layoutY="440.0" prefHeight="26.0" prefWidth="159.0" text="Immatricolation date">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="immatricolationDateTextField" layoutX="565.0" layoutY="479.0" prefHeight="27.0" prefWidth="219.0" promptText="Insert your car's immatricolation date" style="-fx-border-color: #028eff;" />
+            <Label fx:id="transmissionLabel" layoutX="933.0" layoutY="440.0" prefHeight="26.0" prefWidth="128.0" text="Transmission">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="transmissionTextField" layoutX="933.0" layoutY="479.0" prefWidth="171.0" promptText="Insert your car's transmission" style="-fx-border-color: #028eff;" />
+            <CheckBox fx:id="insuranceCheckBox" layoutX="203.0" layoutY="601.0" mnemonicParsing="false" text="Insurance" />
+            <CheckBox fx:id="keylessSystemCheckBox" layoutX="568.0" layoutY="601.0" mnemonicParsing="false" text="Keyless system" />
+            <CheckBox fx:id="heatedSeatsCheckBox" layoutX="936.0" layoutY="601.0" mnemonicParsing="false" text="Heated seats" />
+            <CheckBox fx:id="parkingSensorsCheckBox" layoutX="203.0" layoutY="676.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="118.0" text="Parking sensors" />
+            <CheckBox fx:id="ledHeadlightsCheckBox" layoutX="568.0" layoutY="676.0" mnemonicParsing="false" text="LED headlights" />
+            <Label layoutX="202.0" layoutY="553.0" prefHeight="26.0" prefWidth="73.0" text="Optionals">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="1003.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../MotorBreed/src/main/resources/Icons_and_pics/odometer.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="258.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../MotorBreed/src/main/resources/Icons_and_pics/2962303.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="35.0" layoutX="330.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons_and_pics/55281.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="668.0" layoutY="293.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons_and_pics/922340.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="1011.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons_and_pics/2933839.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="41.0" fitWidth="49.0" layoutX="308.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons_and_pics/310703.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="85.0" fitWidth="109.0" layoutX="719.0" layoutY="401.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons_and_pics/1000_F_268139327_vLfMSgtCLFCHbc2E4pwbMFN6Xti8wdYi-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="1037.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons_and_pics/205474-200%20(1).png" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
