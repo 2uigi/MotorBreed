@@ -1,6 +1,7 @@
 module com.example.motorbreedfinal {
     requires javafx.controls;
     requires javafx.fxml;
+    requires javafx.graphics;
 
 
     opens com.example.motorbreedfinal to javafx.fxml;
