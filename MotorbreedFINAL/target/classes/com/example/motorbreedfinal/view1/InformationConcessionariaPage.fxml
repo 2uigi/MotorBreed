@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.autosell.controller.InformationConcessionariaController">
+    <children>
+        <AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: black;">
+            <children>
+                <ImageView fitHeight="711.0" fitWidth="171.0" layoutX="1109.0" layoutY="-1.0">
+                    <image>
+                        <Image url="@../Icons_and_pics/black.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="726.0" fitWidth="171.0" layoutY="-3.0">
+                    <image>
+                        <Image url="@../Icons_and_pics/black.png" />
+                    </image>
+                </ImageView>
+                <Rectangle fx:id="background" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="734.0" layoutX="171.0" layoutY="-11.0" stroke="BLACK" strokeType="INSIDE" width="938.0" />
+                <Label fx:id="labelProfile" focusTraversable="false" layoutX="514.0" layoutY="21.0" text="My Seller Profile">
+                    <font>
+                        <Font name="System Bold" size="34.0" />
+                    </font>
+                </Label>
+                <Label fx:id="errorEmail" focusTraversable="false" layoutX="204.0" layoutY="388.0" prefHeight="41.0" prefWidth="359.0" text="Email address is not valid!" textFill="RED" visible="false">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Label>
+                <Button fx:id="buttonBack" focusTraversable="false" layoutX="961.0" layoutY="661.0" mnemonicParsing="false" onAction="#goBack" prefHeight="39.0" prefWidth="127.0" style="-fx-background-color: #097ccf; -fx-border-color: black;" text="Go back" textFill="WHITE">
+                    <font>
+                        <Font name="System" size="22.0" />
+                    </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </Button>
+            <TextField fx:id="tfEmail" editable="false" focusTraversable="false" layoutX="203.0" layoutY="347.0" onKeyTyped="#enableDisableSave" prefHeight="41.0" prefWidth="359.0" style="-fx-background-color: white; -fx-border-color: black;">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="tfName" editable="false" focusTraversable="false" layoutX="203.0" layoutY="173.0" onKeyTyped="#enableDisableSave" prefHeight="41.0" prefWidth="359.0" style="-fx-background-color: white; -fx-border-color: black;">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Label fx:id="labelEmail" focusTraversable="false" layoutX="204.0" layoutY="309.0" prefHeight="31.0" prefWidth="145.0" text="Email address">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelAccountData" focusTraversable="false" layoutX="202.0" layoutY="256.0" prefHeight="39.0" prefWidth="180.0" text="Account data">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfAddress" editable="false" focusTraversable="false" layoutX="645.0" layoutY="173.0" onKeyTyped="#enableDisableSave" prefHeight="41.0" prefWidth="359.0" style="-fx-background-color: white; -fx-border-color: black;">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Label fx:id="labelPersonalData" focusTraversable="false" layoutX="202.0" layoutY="85.0" prefHeight="39.0" prefWidth="180.0" text="Personal data">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelName" focusTraversable="false" layoutX="204.0" layoutY="135.0" prefHeight="31.0" prefWidth="162.0" text="Dealership name">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelAddress" focusTraversable="false" layoutX="645.0" layoutY="131.0" prefHeight="31.0" prefWidth="101.0" text="Address">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelPassword" focusTraversable="false" layoutX="204.0" layoutY="442.0" prefHeight="31.0" prefWidth="145.0" text="Password">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonEdit" focusTraversable="false" layoutX="825.0" layoutY="661.0" mnemonicParsing="false" onAction="#setEditable" prefHeight="39.0" prefWidth="127.0" style="-fx-background-color: #097ccf; -fx-border-color: black;" text="Edit" textFill="WHITE">
+               <font>
+                  <Font name="System" size="22.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="buttonSave" disable="true" focusTraversable="false" layoutX="825.0" layoutY="661.0" mnemonicParsing="false" onAction="#save" prefHeight="48.0" prefWidth="127.0" style="-fx-background-color: #097ccf; -fx-border-color: black;" text="Save" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System" size="22.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="errorPassword" focusTraversable="false" layoutX="204.0" layoutY="520.0" prefHeight="41.0" prefWidth="222.0" text="Password is not correct!" textFill="RED" visible="false">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelConfirmNewPassword" focusTraversable="false" layoutX="646.0" layoutY="440.0" prefHeight="31.0" prefWidth="359.0" text="Confirm new password" visible="false">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorConfirmNewPassword" focusTraversable="false" layoutX="646.0" layoutY="520.0" prefHeight="41.0" prefWidth="353.0" text="Passwords do not match!" textFill="RED" visible="false">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelNewPassword" focusTraversable="false" layoutX="646.0" layoutY="310.0" prefHeight="31.0" prefWidth="171.0" text="Password" visible="false">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorNewPassword" focusTraversable="false" layoutX="646.0" layoutY="388.0" prefHeight="41.0" prefWidth="222.0" text="Password is not valid!" textFill="RED" visible="false">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="pfNewPassword" focusTraversable="false" layoutX="645.0" layoutY="347.0" onKeyTyped="#enableDisableSave" prefHeight="41.0" prefWidth="359.0" style="-fx-background-color: white; -fx-border-color: black;" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </PasswordField>
+            <PasswordField fx:id="pfPassword" editable="false" focusTraversable="false" layoutX="203.0" layoutY="479.0" onKeyTyped="#enableDisableSave" prefHeight="41.0" prefWidth="359.0" promptText="Password is hidden for security reasons." style="-fx-background-color: white; -fx-border-color: black;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </PasswordField>
+            <PasswordField fx:id="pfConfirmNewPassword" focusTraversable="false" layoutX="645.0" layoutY="479.0" onKeyTyped="#enableDisableSave" prefHeight="41.0" prefWidth="359.0" style="-fx-background-color: white; -fx-border-color: black;" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </PasswordField>
+            <Label fx:id="labelPwdStrength" alignment="CENTER_RIGHT" focusTraversable="false" layoutX="922.0" layoutY="393.0" prefHeight="31.0" prefWidth="76.0" text="Too weak" visible="false">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorAddress" focusTraversable="false" layoutX="646.0" layoutY="214.0" prefHeight="41.0" prefWidth="353.0" text="Address is not valid!" textFill="RED" visible="false">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
