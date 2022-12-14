@@ -5,10 +5,12 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
@@ -44,8 +46,11 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                 </ImageView>
-                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fffefe" height="245.0" layoutX="171.0" layoutY="480.0" stroke="WHITE" strokeType="INSIDE" width="938.0" />
-                <TextField editable="false" focusTraversable="false" layoutX="171.0" layoutY="87.0" prefHeight="126.0" prefWidth="417.0" style="-fx-background-color: image; -fx-text-fill: white;" text="Seller Userpage">
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fffefe" height="245.0" layoutX="171.0" layoutY="480.0" stroke="WHITE" strokeType="INSIDE" width="938.0">
+               <effect>
+                  <InnerShadow height="255.0" radius="85.4725" width="88.89" />
+               </effect></Rectangle>
+                <TextField editable="false" focusTraversable="false" layoutX="171.0" layoutY="87.0" prefHeight="126.0" prefWidth="417.0" style="-fx-background-color: image; -fx-text-fill: white;" text="Seller Homepage">
                     <font>
                         <Font name="System Italic" size="48.0" />
                     </font>
@@ -69,46 +74,41 @@
                         <Font size="24.0" />
                     </font>
                 </Label>
-            <Button fx:id="customerLoginButton" layoutX="231.0" layoutY="514.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="232.0" style="-fx-border-color: #028eff; -fx-background-color: White;" text="Manage my ads">
+            <Button fx:id="customerLoginButton" layoutX="202.0" layoutY="574.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="232.0" style="-fx-border-color: #028eff; -fx-background-color: White;" text="Insert a new Ad">
                <font>
                   <Font size="25.0" />
                </font>
             </Button>
-            <Button layoutX="231.0" layoutY="631.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="232.0" style="-fx-background-color: white; -fx-border-color: #028eff;" text="Analyze my ads">
+            <Button layoutX="722.0" layoutY="574.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="232.0" style="-fx-background-color: white; -fx-border-color: #028eff;" text="My Profile">
                <font>
                   <Font size="25.0" />
                </font>
             </Button>
-            <Button fx:id="customerLoginButton1" layoutX="813.0" layoutY="514.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="232.0" style="-fx-border-color: #028eff; -fx-background-color: White;" text="Modify Profile">
+            <ImageView fitHeight="126.0" fitWidth="143.0" layoutX="445.0" layoutY="547.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons_and_pics/images.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="97.0" layoutX="984.0" layoutY="554.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons_and_pics/370829-200-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <TextField editable="false" focusTraversable="false" layoutX="202.0" layoutY="343.0" prefHeight="126.0" prefWidth="598.0" style="-fx-background-color: image; -fx-text-fill: white;" text="Welcome, Name Surname">
                <font>
-                  <Font size="25.0" />
+                  <Font name="System Italic" size="48.0" />
                </font>
-            </Button>
-            <Button fx:id="customerLoginButton11" layoutX="813.0" layoutY="631.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="232.0" style="-fx-border-color: #028eff; -fx-background-color: White;" text="Read reviews">
-               <font>
-                  <Font size="25.0" />
-               </font>
-            </Button>
-            <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="477.0" layoutY="619.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Icons_and_pics/AnalyticsIcon.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="477.0" layoutY="502.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Icons_and_pics/download-removebg-preview.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="73.0" fitWidth="73.0" layoutX="721.0" layoutY="619.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Icons_and_pics/651191.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="73.0" fitWidth="73.0" layoutX="721.0" layoutY="508.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Icons_and_pics/528817.png" />
-               </image>
-            </ImageView>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.04605263099074364" green="0.04605263099074364" blue="0.04605263099074364" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </TextField>
             </children>
         </AnchorPane>
     </children>
