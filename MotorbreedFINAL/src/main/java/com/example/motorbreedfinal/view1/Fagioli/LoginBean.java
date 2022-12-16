@@ -19,7 +19,6 @@ public class LoginBean {
     public void setPassword(String password) {
         this.password = password;
     }
-
     private String email;
     private String password;
 

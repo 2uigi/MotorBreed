@@ -10,6 +10,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 
+import javax.security.auth.login.FailedLoginException;
+import javax.security.auth.login.LoginException;
+
 public class LoginControllerG {
     @FXML
     private ImageView btnFacebook;
@@ -40,18 +43,33 @@ public class LoginControllerG {
     }
 
     @FXML
-    void Login(){
-        LoginBean loginBean = new LoginBean();
+    void Login() throws FailedLoginException {
+        LoginBean loginBean = new LoginBean();              // setting loginBean infos
         loginBean.setEmail(tfEmail.getText());
         loginBean.setPassword(pfPassword.getText());
+
         if(loginBean.Validation()){
-            loginController.isUserRegistered();
+
+            try {
+                if (loginController.Login(loginBean)) {
+                    // do();
+                }
+            } catch (FailedLoginException e) {
+                showErrorMessage(e.getMessage());
+            }
+
+
         } else{
             lblWrongFormat.setVisible(true);
         }
-
-
     }
+
+    @FXML
+    public void showErrorMessage(String message) {
+        lblWrongFormat.setText(message);
+        lblWrongFormat.setVisible(true);
+    }
+
     @FXML
     public void registerBuyer(){
 
@@ -70,6 +88,10 @@ public class LoginControllerG {
         } else{
             btnLogin.setDisable(true);
         }
+    }
+
+    public void failedLogin(){
+
     }
 
 }

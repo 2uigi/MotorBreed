@@ -79,7 +79,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                 </Button>
-                <Button fx:id="btnRegisterPrivato" layoutX="865.0" layoutY="563.0" mnemonicParsing="false" onAction="#registerBuyer" style="-fx-text-fill: #028eff; -fx-background-color: white;" text="here" textFill="WHITE">
+                <Button fx:id="btnRegisterPrivato" layoutX="903.0" layoutY="563.0" mnemonicParsing="false" onAction="#registerBuyer" style="-fx-text-fill: #028eff; -fx-background-color: white;" text="here" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="24.0" />
                     </font>
@@ -112,7 +112,7 @@
                         <Font name="System Bold" size="24.0" />
                     </font>
                 </Label>
-                <Button fx:id="btnRegisterConcessionaria" layoutX="672.0" layoutY="606.0" mnemonicParsing="false" onAction="#registerSeller" prefHeight="51.0" prefWidth="82.0" style="-fx-background-color: white; -fx-text-fill: #028eff;" text="here" textFill="#b56363">
+                <Button fx:id="btnRegisterConcessionaria" layoutX="676.0" layoutY="606.0" mnemonicParsing="false" onAction="#registerSeller" prefHeight="51.0" prefWidth="82.0" style="-fx-background-color: white; -fx-text-fill: #028eff;" text="here" textFill="#b56363">
                     <font>
                         <Font name="System Bold" size="24.0" />
                     </font>
