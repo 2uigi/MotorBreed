@@ -12,13 +12,13 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.autosell.controller.LoginController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.motorbreedfinal.view1.LoginControllerG">
     <children>
         <AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: black;">
             <children>
                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="85.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: black;" width="1280.0" />
                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="3.0" layoutY="84.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white;" width="1280.0" />
-                <ImageView fx:id="logoAutosell" fitHeight="61.0" fitWidth="73.0" layoutX="245.0" layoutY="13.0" onMouseReleased="#setHomepage">
+                <ImageView fx:id="logoMotorbreed" fitHeight="61.0" fitWidth="73.0" layoutX="245.0" layoutY="13.0">
                     <image>
                         <Image url="@../Icons_and_pics/Logoicon.png" />
                     </image>
@@ -35,7 +35,7 @@
                 </ImageView>
                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="639.0" layoutX="171.0" layoutY="86.0" stroke="BLACK" strokeType="INSIDE" width="938.0" />
                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="346.0" layoutX="328.0" layoutY="163.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white;" width="608.0" />
-                <ImageView fx:id="buttonGoogle" fitHeight="85.0" fitWidth="85.0" layoutX="494.0" layoutY="198.0" preserveRatio="true">
+                <ImageView fx:id="btnGoogle" fitHeight="85.0" fitWidth="85.0" layoutX="494.0" layoutY="198.0" preserveRatio="true">
                     <image>
                         <Image url="@../Icons_and_pics/Googlelogo.png" />
                     </image>
@@ -43,7 +43,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                 </ImageView>
-                <ImageView fx:id="buttonFacebook" fitHeight="85.0" fitWidth="88.0" layoutX="670.0" layoutY="198.0" preserveRatio="true">
+                <ImageView fx:id="btnFacebook" fitHeight="85.0" fitWidth="88.0" layoutX="670.0" layoutY="198.0" preserveRatio="true">
                     <image>
                         <Image url="@../Icons_and_pics/Facebooklogo.png" />
                     </image>
@@ -51,19 +51,19 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                 </ImageView>
-                <TextField fx:id="tfEmail" focusTraversable="false" layoutX="375.0" layoutY="382.0" onAction="#login" prefHeight="51.0" prefWidth="250.0" promptText="Enter your email" style="-fx-border-color: #028eff;">
+                <TextField fx:id="tfEmail" focusTraversable="false" layoutX="375.0" layoutY="382.0" onKeyTyped="#enableLogin" prefHeight="51.0" prefWidth="250.0" promptText="Enter your email" style="-fx-border-color: #028eff;">
                     <font>
                         <Font name="System Italic" size="14.0" />
                     </font>
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor></TextField>
-            <PasswordField fx:id="pfPassword" focusTraversable="false" layoutX="654.0" layoutY="382.0" onAction="#login" prefHeight="51.0" prefWidth="250.0" promptText="Enter your password" style="-fx-border-color: #028eff;">
+            <PasswordField fx:id="pfPassword" focusTraversable="false" layoutX="654.0" layoutY="382.0" onKeyTyped="#enableLogin" prefHeight="51.0" prefWidth="250.0" promptText="Enter your password" style="-fx-border-color: #028eff;">
                <font>
                   <Font name="System Italic" size="14.0" />
                </font>
             </PasswordField>
-                <Button fx:id="autosell" layoutX="5.0" layoutY="9.0" mnemonicParsing="false" onAction="#setHomepage" style="-fx-background-color: black; -fx-text-fill: white;" text="MotorBreed">
+                <Button fx:id="lblMotorbreed" layoutX="5.0" layoutY="9.0" mnemonicParsing="false" onAction="#setHomepage" style="-fx-background-color: black; -fx-text-fill: white;" text="MotorBreed">
                     <font>
                         <Font name="System Bold" size="34.0" />
                     </font>
@@ -71,7 +71,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                 </Button>
-                <Button fx:id="buttonLogin" contentDisplay="CENTER" layoutX="597.0" layoutY="452.0" mnemonicParsing="false" onAction="#login" prefHeight="39.0" prefWidth="85.0" style="-fx-background-color: #028eff; -fx-text-fill: white;" text="Login" textAlignment="CENTER">
+                <Button fx:id="btnLogin" contentDisplay="CENTER" disable="true" layoutX="597.0" layoutY="452.0" mnemonicParsing="false" onAction="#Login" prefHeight="39.0" prefWidth="85.0" style="-fx-background-color: #028eff; -fx-text-fill: white;" text="Login" textAlignment="CENTER">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
@@ -79,7 +79,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                 </Button>
-                <Button fx:id="buttonRegisterPrivato" layoutX="905.0" layoutY="563.0" mnemonicParsing="false" onAction="#setRegisterPrivato" style="-fx-text-fill: #028eff; -fx-background-color: white;" text="here" textFill="WHITE">
+                <Button fx:id="btnRegisterPrivato" layoutX="865.0" layoutY="563.0" mnemonicParsing="false" onAction="#registerBuyer" style="-fx-text-fill: #028eff; -fx-background-color: white;" text="here" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="24.0" />
                     </font>
@@ -112,7 +112,7 @@
                         <Font name="System Bold" size="24.0" />
                     </font>
                 </Label>
-                <Button fx:id="buttonRegisterConcessionaria" layoutX="677.0" layoutY="606.0" mnemonicParsing="false" onAction="#setRegisterConcessionaria" prefHeight="51.0" prefWidth="82.0" style="-fx-background-color: white; -fx-text-fill: #028eff;" text="here" textFill="#b56363">
+                <Button fx:id="btnRegisterConcessionaria" layoutX="672.0" layoutY="606.0" mnemonicParsing="false" onAction="#registerSeller" prefHeight="51.0" prefWidth="82.0" style="-fx-background-color: white; -fx-text-fill: #028eff;" text="here" textFill="#b56363">
                     <font>
                         <Font name="System Bold" size="24.0" />
                     </font>
@@ -125,6 +125,7 @@
                         <Font size="24.0" />
                     </font>
                 </Label>
+            <Label fx:id="lblWrongFormat" layoutX="486.0" layoutY="328.0" prefHeight="17.0" prefWidth="291.0" text="Email or password format are not correct. Insert again" textFill="RED" visible="false" />
             </children>
         </AnchorPane>
     </children>
