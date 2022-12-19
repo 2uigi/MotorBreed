@@ -1,6 +1,6 @@
 package com.example.motorbreedfinal.Controller;
 
-import com.example.motorbreedfinal.DAO.LoginDao;
+import com.example.motorbreedfinal.Model.DAO.LoginDao;
 import com.example.motorbreedfinal.view1.Fagioli.LoginBean;
 
 import javax.security.auth.login.FailedLoginException;
