@@ -1,5 +1,7 @@
 package com.example.motorbreedfinal.Model;
 
+import com.example.motorbreedfinal.Model.Users.Seller;
+
 import java.util.Date;
 
 public class Ad {
@@ -8,6 +10,7 @@ public class Ad {
     private String description;
     private String location;
     private Date insertionDate;
+    private int numberOfClicks;
     private Car car;
     private Seller seller;
 

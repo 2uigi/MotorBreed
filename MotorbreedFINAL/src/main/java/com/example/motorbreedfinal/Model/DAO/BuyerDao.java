@@ -1,4 +1,4 @@
 package com.example.motorbreedfinal.Model.DAO;
 
-public class BuyerDao {
+public class BuyerDao extends UserDAO{
 }

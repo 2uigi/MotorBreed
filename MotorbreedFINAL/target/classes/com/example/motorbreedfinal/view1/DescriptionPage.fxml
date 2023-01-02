@@ -97,13 +97,11 @@
                   <Font size="17.0" />
                </font>
             </Label>
-            <Label layoutX="694.0" layoutY="424.0" prefHeight="28.0" prefWidth="306.0" text="Drag and drop a picture of your vehicle ">
+            <Label layoutX="694.0" layoutY="424.0" prefHeight="28.0" prefWidth="306.0" text="Upload a picture of your vehicle">
                <font>
                   <Font size="17.0" />
                </font>
             </Label>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="149.0" layoutX="694.0" layoutY="465.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-border-color: #028eff;" width="312.0" />
-            <ImageView fitHeight="150.0" fitWidth="312.0" layoutX="694.0" layoutY="465.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="427.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Icons_and_pics/operation-manual.png" />
@@ -124,7 +122,7 @@
                   <Image url="@../Icons_and_pics/361-3614560_the-front-page-of-bxx-product-category-information-icon.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="46.0" layoutX="992.0" layoutY="421.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="46.0" layoutX="935.0" layoutY="421.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Icons_and_pics/unnamed.png" />
                </image>

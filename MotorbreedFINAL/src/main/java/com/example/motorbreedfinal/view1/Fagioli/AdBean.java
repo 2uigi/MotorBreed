@@ -1,7 +1,7 @@
 package com.example.motorbreedfinal.view1.Fagioli;
 
 import com.example.motorbreedfinal.Model.Car;
-import com.example.motorbreedfinal.Model.Seller;
+import com.example.motorbreedfinal.Model.Users.Seller;
 import com.example.motorbreedfinal.view1.InsertpageControllerG;
 
 import java.util.Date;
