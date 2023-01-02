@@ -12,6 +12,7 @@ import javafx.scene.image.ImageView;
 
 import javax.security.auth.login.FailedLoginException;
 import javax.security.auth.login.LoginException;
+import java.sql.SQLException;
 
 public class LoginControllerG {
     @FXML
@@ -51,13 +52,18 @@ public class LoginControllerG {
         if(loginBean.Validation()){
 
             try {
-                if (loginController.Login(loginBean)) {
-                    // do();
+                int result = loginController.Login(loginBean);
+
+                if ( result== 0 ) {
+                    FxmlLoaderMain.setPage("SellerHomepage");
+                }else if(result == 1) {
+                    FxmlLoaderMain.setPage("BuyerHomepage");
                 }
             } catch (FailedLoginException e) {
                 showErrorMessage(e.getMessage());
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
             }
-
 
         } else{
             lblWrongFormat.setVisible(true);
