@@ -15,7 +15,7 @@ public class Connector {
 
     private Connector() throws SQLException {
         try{
-            conn = DriverManager.getConnection(USER,PASS,DB_URL);
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
         }catch(SQLException e){
             e.printStackTrace();
         }

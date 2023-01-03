@@ -30,6 +30,8 @@ public class LoginController {
 
         accountDao.setAccount(account, loginBean.getEmail());
 
+        System.out.println(account);
+
 
 
 
