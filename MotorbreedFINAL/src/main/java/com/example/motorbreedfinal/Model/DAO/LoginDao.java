@@ -12,15 +12,15 @@ import java.sql.Statement;
 public class LoginDao {
     public String checkCredentials(String email, String password) throws SQLException {
 
-        Statement stmt1=null;
-        Connection conn1=null;
-        String role=null;
+        Statement stmt = null;
+        Connection conn = null;
+        String role = null;
 
         try {
-            conn1= Connector.getInstance().getConnection();
+            conn = Connector.getInstance().getConnection();
 
-            stmt1 = conn1.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-            ResultSet rs = Query.checkSignedUserByEmail(stmt1, email);
+            stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs = Query.checkSignedUserByEmail(stmt, email);
 
             if (!rs.first()){
                 throw new FailedLoginException("email not registered!");
@@ -45,8 +45,8 @@ public class LoginDao {
         } catch (FailedLoginException e) {
             throw new RuntimeException(e);
         } finally {
-            if(stmt1 != null){
-                stmt1.close();
+            if(stmt != null){
+                stmt.close();
             }
 
         }

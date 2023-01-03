@@ -1,6 +1,6 @@
 package com.example.motorbreedfinal.Model.DAO;
 
-public class BuyerDao extends UserDAO{
+public class BuyerDao extends AccountDao {
 
     @Override
     public void retrieveUserInfo() {

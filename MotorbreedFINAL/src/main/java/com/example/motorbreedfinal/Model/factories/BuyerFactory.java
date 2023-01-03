@@ -3,7 +3,7 @@ package com.example.motorbreedfinal.Model.factories;
 import com.example.motorbreedfinal.Model.Users.Account;
 import com.example.motorbreedfinal.Model.Users.Buyer;
 import com.example.motorbreedfinal.Model.DAO.BuyerDao;
-import com.example.motorbreedfinal.Model.DAO.UserDAO;
+import com.example.motorbreedfinal.Model.DAO.AccountDao;
 
 public class BuyerFactory extends UserFactory {
     @Override
@@ -12,7 +12,7 @@ public class BuyerFactory extends UserFactory {
     }
 
     @Override
-    public UserDAO createDAO() {
+    public AccountDao createDAO() {
         return new BuyerDao();
     }
 }

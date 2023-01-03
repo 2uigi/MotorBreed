@@ -1,13 +1,10 @@
 package com.example.motorbreedfinal.Model.DAO;
 
-public class SellerDao extends UserDAO{
+import java.sql.Connection;
+import java.sql.Statement;
 
-    @Override
-    public void retrieveUserInfo(){
-        retrieveSellerInfo();
-        retrieveSellerAds();
-        retrieveSellerRatings();
-    }
+public class SellerDao extends AccountDao {
+
 
     private void retrieveSellerRatings() {
     }

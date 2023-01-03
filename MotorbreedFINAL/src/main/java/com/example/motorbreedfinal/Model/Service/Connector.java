@@ -1,23 +1,33 @@
 package com.example.motorbreedfinal.Model.Service;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class Connector {
 
-    private static final String USER = null;
-    private static final String PASS = null;
-    private static final String DB_URL = null;
+    private static final String USER = "Luigi";
+    private static final String PASS = "5headLmao";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/ispw";
 
     private static Connector instance = null;
     private Connection conn = null;
 
-    private Connector(){
-        //costruttore con qualcosa del tipo crea connessione
+    private Connector() throws SQLException {
+        try{
+            conn = DriverManager.getConnection(USER,PASS,DB_URL);
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
     }
 
-    public static Connector getInstance(){
+    public static Connector getInstance() throws SQLException {
         if(instance == null){
-            instance = new Connector();
+            try {
+                instance = new Connector();
+            }catch (SQLException e){
+                e.printStackTrace();
+            }
         }
         return instance;
     }

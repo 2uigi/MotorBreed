@@ -7,12 +7,8 @@ import com.example.motorbreedfinal.Model.Users.Account;
 import java.util.List;
 
 public class Seller extends Account {
-    List<Ad> adList;
-    List<Rating> ratingList;
-
-    public void retrieveInfo() {
-
-    }
+    private List<Ad> adList;
+    private List<Rating> ratingList;
 
     public boolean addAdvertisement(Ad ad) {
         return false;

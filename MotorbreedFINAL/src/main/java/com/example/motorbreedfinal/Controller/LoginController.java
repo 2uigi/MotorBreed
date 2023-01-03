@@ -1,9 +1,7 @@
 package com.example.motorbreedfinal.Controller;
 
 import com.example.motorbreedfinal.Model.DAO.LoginDao;
-import com.example.motorbreedfinal.Model.DAO.RatingDao;
-import com.example.motorbreedfinal.Model.DAO.UserDAO;
-import com.example.motorbreedfinal.Model.Rating;
+import com.example.motorbreedfinal.Model.DAO.AccountDao;
 import com.example.motorbreedfinal.Model.Users.Account;
 import com.example.motorbreedfinal.Model.factories.UserFactory;
 import com.example.motorbreedfinal.view1.Fagioli.LoginBean;
@@ -28,9 +26,15 @@ public class LoginController {
 
         Account account = myFactory.createAccount();
 
-        UserDAO userDao = myFactory.createDAO();
+        AccountDao accountDao = myFactory.createDAO();
 
-        userDao.retrieveUserInfo();
+        accountDao.setAccount(account, loginBean.getEmail());
+
+
+
+
+
+
 
         if(role.equals("Seller")){
             return 0;
