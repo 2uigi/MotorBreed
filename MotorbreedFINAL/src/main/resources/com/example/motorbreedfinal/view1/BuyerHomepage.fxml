@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com/example/motorbreedfinal/view1/BuyerHomepageControllerG.java">
+    <children>
+        <AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: black;">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="85.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: black;" width="1280.0" />
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="3.0" layoutY="84.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white;" width="1280.0" />
+                <ImageView fitHeight="61.0" fitWidth="73.0" layoutX="245.0" layoutY="13.0">
+                    <image>
+                        <Image url="@../Icons_and_pics/Logoicon.png" />
+                    </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </ImageView>
+                <ImageView fitHeight="633.0" fitWidth="171.0" layoutX="1109.0" layoutY="86.0">
+                    <image>
+                        <Image url="@../Icons_and_pics/black.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="639.0" fitWidth="171.0" layoutY="86.0">
+                    <image>
+                        <Image url="@../Icons_and_pics/black.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="445.0" fitWidth="938.0" layoutX="171.0" layoutY="86.0">
+                    <image>
+                        <Image url="@../Icons_and_pics/wallpaperflare.com_wallpaper.jpg" />
+                    </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </ImageView>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fffefe" height="245.0" layoutX="171.0" layoutY="480.0" stroke="WHITE" strokeType="INSIDE" width="938.0">
+               <effect>
+                  <InnerShadow height="255.0" radius="85.4725" width="88.89" />
+               </effect></Rectangle>
+                <TextField editable="false" focusTraversable="false" layoutX="171.0" layoutY="87.0" prefHeight="126.0" prefWidth="417.0" style="-fx-background-color: image; -fx-text-fill: white;" text="Buyer Homepage">
+                    <font>
+                        <Font name="System Italic" size="48.0" />
+                    </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+                </TextField>
+                <Button layoutX="5.0" layoutY="9.0" mnemonicParsing="false" style="-fx-background-color: black; -fx-text-fill: white;" text="MotorBreed">
+                    <font>
+                        <Font name="System Bold" size="34.0" />
+                    </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </Button>
+                <Label fx:id="labelLoggedUser" alignment="CENTER_RIGHT" layoutX="845.0" layoutY="28.0" prefHeight="38.0" prefWidth="399.0" textFill="WHITE" visible="false">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+            <Button fx:id="buyCarbtn" layoutX="202.0" layoutY="574.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="232.0" style="-fx-border-color: #028eff; -fx-background-color: White;" text="Buy a Car">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="myProfilebtn" layoutX="722.0" layoutY="574.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="232.0" style="-fx-background-color: white; -fx-border-color: #028eff;" text="My Profile">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="126.0" fitWidth="143.0" layoutX="447.0" layoutY="540.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons_and_pics/SellerIcon-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="97.0" layoutX="984.0" layoutY="554.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons_and_pics/370829-200-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="nameSurnameTF" editable="false" focusTraversable="false" layoutX="202.0" layoutY="343.0" prefHeight="126.0" prefWidth="598.0" style="-fx-background-color: image; -fx-text-fill: white;" text="Welcome, Name Surname">
+               <font>
+                  <Font name="System Italic" size="48.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.04605263099074364" green="0.04605263099074364" blue="0.04605263099074364" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </TextField>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

@@ -3,6 +3,7 @@ module com.example.motorbreedfinal {
     requires javafx.fxml;
     requires javafx.graphics;
     requires java.sql;
+    requires mysql.connector.j;
 
 
     exports com.example.motorbreedfinal.view1;

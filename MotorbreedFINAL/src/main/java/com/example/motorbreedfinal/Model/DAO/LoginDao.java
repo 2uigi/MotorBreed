@@ -22,7 +22,7 @@ public class LoginDao {
             stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
             ResultSet rs = Query.checkSignedUserByEmail(stmt, email);
 
-            if (!rs.first()){
+            if (!rs.first()){       // se rs.first() fallisce non ci sono risultati per la query
                 throw new FailedLoginException("email not registered!");
             }
             rs.first();

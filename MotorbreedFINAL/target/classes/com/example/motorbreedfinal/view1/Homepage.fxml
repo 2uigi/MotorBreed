@@ -77,7 +77,7 @@
                         <Font size="24.0" />
                     </font>
                 </Label>
-            <Button fx:id="customerLoginButton" layoutX="202.0" layoutY="574.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="232.0" style="-fx-border-color: #028eff; -fx-background-color: White;" text="Customer Login">
+            <Button fx:id="customerLoginButton" layoutX="202.0" layoutY="574.0" mnemonicParsing="false" onAction="#setLoginPage" prefHeight="61.0" prefWidth="232.0" style="-fx-border-color: #028eff; -fx-background-color: White;" text="Customer Login">
                <font>
                   <Font size="25.0" />
                </font>

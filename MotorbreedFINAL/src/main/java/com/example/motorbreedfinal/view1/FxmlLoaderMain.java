@@ -1,14 +1,16 @@
 package com.example.motorbreedfinal.view1;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-
+import java.util.Objects;
 
 
 public class FxmlLoaderMain extends Application {
@@ -33,6 +35,7 @@ public class FxmlLoaderMain extends Application {
             if (fileUrl == null) {
                 //scrivi try catch per raccogliere questa giovane eccezione 
             }
+            assert fileUrl != null;
             Parent root = FXMLLoader.load(fileUrl);
             Scene scene = new Scene(root, 1280, 720);
             stage.setScene(scene);
@@ -40,6 +43,7 @@ public class FxmlLoaderMain extends Application {
             throw new RuntimeException(ex);
         }
     }
+
 
     public static void main(String[] args) {
         launch();

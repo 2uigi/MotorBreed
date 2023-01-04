@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.motorbreedfinal.view1.HomepageControllerG">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com/example/motorbreedfinal/view1/SellerHomepageControllerG.java">
     <children>
         <AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: black;">
             <children>
@@ -74,12 +74,12 @@
                         <Font size="24.0" />
                     </font>
                 </Label>
-            <Button fx:id="customerLoginButton" layoutX="202.0" layoutY="574.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="232.0" style="-fx-border-color: #028eff; -fx-background-color: White;" text="Insert a new Ad">
+            <Button fx:id="insertAdbtn" layoutX="202.0" layoutY="574.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="232.0" style="-fx-border-color: #028eff; -fx-background-color: White;" text="Insert a new Ad">
                <font>
                   <Font size="25.0" />
                </font>
             </Button>
-            <Button layoutX="722.0" layoutY="574.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="232.0" style="-fx-background-color: white; -fx-border-color: #028eff;" text="My Profile">
+            <Button fx:id="myProfilebtn" layoutX="722.0" layoutY="574.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="232.0" style="-fx-background-color: white; -fx-border-color: #028eff;" text="My Profile">
                <font>
                   <Font size="25.0" />
                </font>
@@ -94,7 +94,7 @@
                   <Image url="@../Icons_and_pics/370829-200-removebg-preview.png" />
                </image>
             </ImageView>
-            <TextField editable="false" focusTraversable="false" layoutX="202.0" layoutY="343.0" prefHeight="126.0" prefWidth="598.0" style="-fx-background-color: image; -fx-text-fill: white;" text="Welcome, Name Surname">
+            <TextField fx:id="nameSurnameTF" editable="false" focusTraversable="false" layoutX="202.0" layoutY="343.0" prefHeight="126.0" prefWidth="598.0" style="-fx-background-color: image; -fx-text-fill: white;" text="Welcome, Name Surname">
                <font>
                   <Font name="System Italic" size="48.0" />
                </font>

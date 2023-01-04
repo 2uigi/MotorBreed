@@ -2,6 +2,7 @@ package com.example.motorbreedfinal.view1;
 
 import com.example.motorbreedfinal.Controller.LoginController;
 import com.example.motorbreedfinal.view1.Fagioli.LoginBean;
+import com.example.motorbreedfinal.view1.Fagioli.SellerHomepageBean;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -36,16 +37,16 @@ public class LoginControllerG {
     @FXML
     private Label lblWrongFormat;
 
-    LoginController loginController = new LoginController();
+    LoginController loginController = new LoginController(); // istanziamo il controller applicativo
 
     @FXML
     void setHomepage(ActionEvent event) {
         FxmlLoaderMain.setPage("Homepage");
-    }
+    } // operazione usata al termine del caso d'uso
 
     @FXML
-    void Login() throws FailedLoginException {
-        LoginBean loginBean = new LoginBean();              // setting loginBean infos
+    void Login() {
+        LoginBean loginBean = new LoginBean();              // settaggio parametri LoginBean
         loginBean.setEmail(tfEmail.getText());
         loginBean.setPassword(pfPassword.getText());
 
@@ -59,6 +60,9 @@ public class LoginControllerG {
                 }else if(result == 1) {
                     FxmlLoaderMain.setPage("BuyerHomepage");
                 }
+
+
+
             } catch (FailedLoginException e) {
                 showErrorMessage(e.getMessage());
             } catch (SQLException e) {
