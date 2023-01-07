@@ -8,15 +8,17 @@ public class Connector {
 
     private static final String USER = "Luigi";
     private static final String PASS = "5headLmao";
+    private static final String USER1 = "root";
+    private static final String PASS1 = "root1234";
     private static final String DB_URL = "jdbc:mysql://localhost:3306/ispw";
 
     private static Connector instance = null;
     private Connection conn = null;
-
     private Connector() throws SQLException {
         try{
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
         }catch(SQLException e){
+            conn = DriverManager.getConnection(DB_URL, USER1, PASS1);
             e.printStackTrace();
         }
     }
@@ -37,5 +39,3 @@ public class Connector {
     }
 
 }
-
-
