@@ -25,14 +25,12 @@ public class FxmlLoader extends Application {
         stage.setScene(scene);
         stage.show();
     }
-
     public static FXMLLoader setPage(String fileName) {
         try {
             URL fileUrl = FxmlLoader.class.getResource(fileName + ".fxml");
             FXMLLoader loader = new FXMLLoader(fileUrl);
             assert fileUrl != null;
-            Parent root = loader.load(fileUrl);
-            
+            Parent root = loader.load();
             Scene scene = new Scene(root, 1280, 720);
             stage.setScene(scene);
             return loader;

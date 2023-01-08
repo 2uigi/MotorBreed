@@ -63,9 +63,9 @@ public class LoginControllerG {
 
                 if ( result == 0 ) {
                     fxmlLoader = FxmlLoader.setPage("SellerHomepage");
+                    System.out.println(fxmlLoader.getController().toString());
                     sellerHomepageControllerG = fxmlLoader.getController();
                     sellerHomepageControllerG.setNameSurnameTF("Luigi", "Talamo");
-
                 }else if(result == 1) {
                     
                 }

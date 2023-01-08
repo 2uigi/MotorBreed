@@ -21,7 +21,7 @@ public class SellerHomepageControllerG {
     private Button myProfilebtn;
 
     @FXML
-    private static TextField nameSurnameTF;
+    private TextField nameSurnameTF;
 
     /*public void setNameSurnameTF(AccountHomepageBean accountHomepageBean) {
         nameSurnameTF.setText("Welcome " + accountHomepageBean.getFirstName()+ " "+ accountHomepageBean.getLastName());
