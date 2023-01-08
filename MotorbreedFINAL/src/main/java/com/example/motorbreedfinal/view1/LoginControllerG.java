@@ -2,9 +2,11 @@ package com.example.motorbreedfinal.view1;
 
 import com.example.motorbreedfinal.Controller.LoginController;
 import com.example.motorbreedfinal.view1.Fagioli.LoginBean;
-import com.example.motorbreedfinal.view1.Fagioli.SellerHomepageBean;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -12,7 +14,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 
 import javax.security.auth.login.FailedLoginException;
-import javax.security.auth.login.LoginException;
+import java.io.IOException;
+import java.net.URL;
 import java.sql.SQLException;
 
 public class LoginControllerG {
@@ -39,9 +42,11 @@ public class LoginControllerG {
 
     LoginController loginController = new LoginController(); // istanziamo il controller applicativo
 
+    SellerHomepageControllerG sellerHomepageControllerG;
+    FXMLLoader fxmlLoader;
     @FXML
-    void setHomepage(ActionEvent event) {
-        FxmlLoaderMain.setPage("Homepage");
+    void setHomepage(ActionEvent event) throws IOException {
+        FxmlLoader.setPage("Homepage");
     } // operazione usata al termine del caso d'uso
 
     @FXML
@@ -55,17 +60,22 @@ public class LoginControllerG {
             try {
                 int result = loginController.Login(loginBean);
 
-                if ( result== 0 ) {
-                    FxmlLoaderMain.setPage("SellerHomepage");
+
+                if ( result == 0 ) {
+                    fxmlLoader = FxmlLoader.setPage("SellerHomepage");
+                    sellerHomepageControllerG = fxmlLoader.getController();
+                    sellerHomepageControllerG.setNameSurnameTF("Luigi", "Talamo");
+
                 }else if(result == 1) {
-                    FxmlLoaderMain.setPage("BuyerHomepage");
+                    
                 }
+
 
 
 
             } catch (FailedLoginException e) {
                 showErrorMessage(e.getMessage());
-            } catch (SQLException e) {
+            } catch (SQLException | IOException e) {
                 throw new RuntimeException(e);
             }
 

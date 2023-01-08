@@ -7,5 +7,6 @@ module com.example.motorbreedfinal {
 
 
     exports com.example.motorbreedfinal.view1;
+    exports com.example.motorbreedfinal.view1.Fagioli;
     opens com.example.motorbreedfinal.view1 to javafx.fxml;
 }
