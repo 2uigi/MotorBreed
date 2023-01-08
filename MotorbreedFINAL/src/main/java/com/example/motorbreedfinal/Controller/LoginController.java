@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class LoginController {
-    public int Login(LoginBean loginBean) throws FailedLoginException, SQLException, IOException {
+    public AccountHomepageBean Login(LoginBean loginBean) throws FailedLoginException, SQLException, IOException {
 
         LoginDao loginDao = new LoginDao(); // creazione loginDao per trovare role
 
@@ -35,12 +35,9 @@ public class LoginController {
         AccountHomepageBean accountHomepageBean = new AccountHomepageBean();
         accountHomepageBean.setFirstName(account.getFirstName());
         accountHomepageBean.setLastName(account.getLastName());
+        accountHomepageBean.setRole(role);
 
-        if(role.equals("Seller")){
-            return 0;
-        }else{
-            return 1;
-        }
+        return accountHomepageBean;
     }
 
     public void buyerSignIn(){

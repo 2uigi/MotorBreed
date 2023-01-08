@@ -1,6 +1,7 @@
 package com.example.motorbreedfinal.view1;
 
 import com.example.motorbreedfinal.Controller.LoginController;
+import com.example.motorbreedfinal.view1.Fagioli.AccountHomepageBean;
 import com.example.motorbreedfinal.view1.Fagioli.LoginBean;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -42,8 +43,9 @@ public class LoginControllerG {
 
     LoginController loginController = new LoginController(); // istanziamo il controller applicativo
 
-    SellerHomepageControllerG sellerHomepageControllerG;
     FXMLLoader fxmlLoader;
+
+    AccountHomepageBean accountHomepageBean;
     @FXML
     void setHomepage(ActionEvent event) throws IOException {
         FxmlLoader.setPage("Homepage");
@@ -58,16 +60,19 @@ public class LoginControllerG {
         if(loginBean.Validation()){
 
             try {
-                int result = loginController.Login(loginBean);
+                accountHomepageBean = loginController.Login(loginBean);
 
 
-                if ( result == 0 ) {
+                if (accountHomepageBean.getRole().equals("Seller")) {
+                    SellerHomepageControllerG sellerHomepageControllerG;
                     fxmlLoader = FxmlLoader.setPage("SellerHomepage");
-                    System.out.println(fxmlLoader.getController().toString());
                     sellerHomepageControllerG = fxmlLoader.getController();
-                    sellerHomepageControllerG.setNameSurnameTF("Luigi", "Talamo");
-                }else if(result == 1) {
-                    
+                    sellerHomepageControllerG.setNameSurnameTF(accountHomepageBean);
+                }else if(accountHomepageBean.getRole().equals("Buyer")) {
+                    BuyerHomepageControllerG buyerHomepageControllerG;
+                    fxmlLoader = FxmlLoader.setPage("SellerHomepage");
+                    buyerHomepageControllerG = fxmlLoader.getController();
+                    buyerHomepageControllerG.setNameSurnameTF(accountHomepageBean);
                 }
 
 

@@ -1,5 +1,6 @@
 package com.example.motorbreedfinal.view1;
 
+import com.example.motorbreedfinal.view1.Fagioli.AccountHomepageBean;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -19,4 +20,7 @@ public class BuyerHomepageControllerG {
     @FXML
     private TextField nameSurnameTF;
 
+    public void setNameSurnameTF(AccountHomepageBean accountHomepageBean) {
+        nameSurnameTF.setText("Welcome " + accountHomepageBean.getFirstName()+ " "+ accountHomepageBean.getLastName());
+    }
 }

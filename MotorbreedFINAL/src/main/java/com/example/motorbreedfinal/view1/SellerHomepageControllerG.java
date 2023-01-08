@@ -23,11 +23,7 @@ public class SellerHomepageControllerG {
     @FXML
     private TextField nameSurnameTF;
 
-    /*public void setNameSurnameTF(AccountHomepageBean accountHomepageBean) {
+    public void setNameSurnameTF(AccountHomepageBean accountHomepageBean) {
         nameSurnameTF.setText("Welcome " + accountHomepageBean.getFirstName()+ " "+ accountHomepageBean.getLastName());
-    }*/
-
-    public void setNameSurnameTF(String name, String surname) {
-        nameSurnameTF.setText("Welcome " + name + " "+ surname);
     }
 }
