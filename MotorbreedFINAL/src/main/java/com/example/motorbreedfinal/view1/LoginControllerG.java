@@ -62,21 +62,18 @@ public class LoginControllerG {
             try {
                 accountHomepageBean = loginController.Login(loginBean);
 
-
                 if (accountHomepageBean.getRole().equals("Seller")) {
                     SellerHomepageControllerG sellerHomepageControllerG;
                     fxmlLoader = FxmlLoader.setPage("SellerHomepage");
                     sellerHomepageControllerG = fxmlLoader.getController();
                     sellerHomepageControllerG.setNameSurnameTF(accountHomepageBean);
+
                 }else if(accountHomepageBean.getRole().equals("Buyer")) {
                     BuyerHomepageControllerG buyerHomepageControllerG;
-                    fxmlLoader = FxmlLoader.setPage("SellerHomepage");
+                    fxmlLoader = FxmlLoader.setPage("BuyerHomepage");
                     buyerHomepageControllerG = fxmlLoader.getController();
                     buyerHomepageControllerG.setNameSurnameTF(accountHomepageBean);
                 }
-
-
-
 
             } catch (FailedLoginException e) {
                 showErrorMessage(e.getMessage());
@@ -97,22 +94,18 @@ public class LoginControllerG {
 
     @FXML
     public void registerBuyer(){
-
+        FxmlLoader.setPage("RegisterPrivatoPage");
     }
 
     @FXML
     public void registerSeller(){
-
+        FxmlLoader.setPage("RegisterConcessionariaPage");
     }
 
     @FXML
     public void enableLogin(){
         lblWrongFormat.setVisible(false);
-        if(pfPassword.getText().length()>5 && tfEmail.getText().length()>5){
-            btnLogin.setDisable(false);
-        } else{
-            btnLogin.setDisable(true);
-        }
+        btnLogin.setDisable(pfPassword.getText().length() <= 5 || tfEmail.getText().length() <= 5);
     }
 
     public void failedLogin(){
